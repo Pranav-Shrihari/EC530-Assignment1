@@ -18,7 +18,7 @@ void Haversine(int size1, string arr1[], int size2, string arr2[]) {
 
     //Loop through all values in the first array
     for (int i = 0; i < size1; i++) {
-        //Split each entry in the first array into latitude and longtitude
+        //Split each entry in the first array into latitude and longitude
         float lat1, long1;
 
         // Create a stringstream to split the input string
@@ -34,13 +34,13 @@ void Haversine(int size1, string arr1[], int size2, string arr2[]) {
         getline(ss, token, ',');  // Split at comma
         long1 = stof(token);  // Convert string to float
 
-        //Convert latitude and longtitude from degrees to radians
+        //Convert latitude and longitude from degrees to radians
         double rad_lat1 = lat1 * M_PI / 180.0;
         double rad_long1 = long1 * M_PI / 180.0;
 
         //For each value in the first array, loop through all values in the second array
         for (int j = 0; j < size2; j++) {
-            //Split each entry in the second array into latitude and longtitude
+            //Split each entry in the second array into latitude and longitude
             float lat2, long2;
 
             // Create a stringstream to split the input string
@@ -56,7 +56,7 @@ void Haversine(int size1, string arr1[], int size2, string arr2[]) {
             getline(ss, token, ',');  // Split at comma
             long2 = stof(token);  // Convert string to float
 
-            //Convert latitude and longtitude from degrees to radians
+            //Convert latitude and longitude from degrees to radians
             double rad_lat2 = lat2 * M_PI / 180.0;
             double rad_long2 = long2 * M_PI / 180.0;
 
@@ -78,7 +78,7 @@ void Haversine(int size1, string arr1[], int size2, string arr2[]) {
             else if (dist < mindist) {
                 //Append new minimum distance
                 mindist = dist;
-                //Add new values of latitude and longtitude
+                //Add new values of latitude and longitude
                 minlat = lat2;
                 minlong = long2;
             }
@@ -101,7 +101,7 @@ int main() {
     
     //User enters each entry in the first array
     for (int i = 0; i < size1; i++) {
-        cout << "Enter location number " << i + 1 << " in the format 'latitude,longtitude', with latitude and longtitude in degrees (e.g. New York = 40.7128,74.0060): " << endl;
+        cout << "Enter location number " << i + 1 << " in the format 'latitude,longitude', with latitude and longitude in degrees (e.g. New York = 40.7128,74.0060): " << endl;
         cin >> arr1[i]; 
     }
     cout << endl;
@@ -115,7 +115,7 @@ int main() {
 
     //User enters each entry in the second array
     for (int j = 0; j < size2; j++) {
-        cout << "Enter location number " << j + 1 << " in the format 'latitude,longtitude', with latitude and longtitude in degrees (e.g. New York = 40.7128,74.0060): " << endl;
+        cout << "Enter location number " << j + 1 << " in the format 'latitude,longitude', with latitude and longitude in degrees (e.g. New York = 40.7128,74.0060): " << endl;
         cin >> arr2[j];
     }
     cout << endl;
