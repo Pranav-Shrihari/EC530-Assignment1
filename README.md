@@ -3,4 +3,6 @@ This repository is for the first assignment for EC530, where we had to write a p
 
 The way that this program works is it asks for the user to firstly enter the size of the first array and then subsequently enter each point in the first array in a specified format. It then asks the user to enter the size of the second array and then enter each point in the second array in the same specified format. 
 
-The program then calls the Haversine function, which first converts the entry in the first array into latitude and longitude. 
+The program then calls the Haversine function, which first converts the entry in the first array into latitude and longitude. It then loops through each entry in the second array and converts the entry in the second array into latitude and longitude, before finding the distance between the point in the first array and the point in the second array. 
+
+It then compares the distance between the two points to the previous smallest distance and updates the latitude and longitude of the second point if the distance is smaller. This process is then repeated for each point in the second array until either there are no more entries in the second array, or a point is found where the distance is 0. This point is then output as the closest point to the point in the first array. This process is then repeated for each point in the first array until every point in the first array is matched to a point in the second array. 
